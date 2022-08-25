@@ -6,3 +6,20 @@ const pokemons = [
   { nome: 'Squirtle', tipo: 'água', vida: 45 },
   { nome: 'Psyduck', tipo: 'água', vida: 25 },
 ]
+
+function pokefuncao (pokemons){
+  const pokemon100={...pokemons,vida:100}
+  return pokemon100
+  }
+console.log(pokefuncao(pokemons[1]))
+//vai mudar o vida do indice 1 para 100 
+
+const pokemonVidaCheia =pokemons.map(pokefuncao)
+console.log(pokemonVidaCheia);
+//todos com vida:100
+
+const pokemonDeFogo=pokemons.filter((item)=>{return item.tipo==="fogo"})
+console.log(pokemonDeFogo)
+//mostrou os dois itens com o tipo:fogo
+
+
